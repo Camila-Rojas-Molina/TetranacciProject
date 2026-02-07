@@ -18,22 +18,26 @@ else
 
 ---------------------------------
 
-Linear Tetranacci (with memoization)
+Linear Tetranacci (with arrays)
 
 Algorithm LinearTetr(k)
 Input: Nonnegative integer k
 Output: the kth Tetranacci number Fk
 
-create hashmap
-if k has already been calculated then
-    return result from hashmap
-if k <= 2 then
-    return 0
-if k = 3
-    return 1
-else
-    return MultipleTetr(k-1) + MultipleTetr(k-2) + MultipleTetr(k-3) + MultipleTetr(k-4)
-store value in hashmap
+IF k = 0
+    RETURN array [0, 0, 0, 1]
+    RETURN sum
+IF k = 1
+    RETURN array [0, 0, 1, 0]
+    RETURN sum
+IF k = 2
+    RETURN array [0, 1, 0, 0]
+    RETURN sum
+IF k = 3
+    RETURN array [1, 0, 0, 0]
+    RETURN sum
+ELSE LinearTetr(k - 1)
+    RETURN sum
 
 ---------------------------------
 
@@ -44,17 +48,17 @@ Input: Nonnegative integer k
 Output: the kth Tetranacci number Fk
 
 FUNCTION Tetranacci(n):
-    RETURN TetranacciHelper(n, 0, 0, 0, 1)
+    RETURN TetranacciHelper(k, 0, 0, 0, 1)
 
-FUNCTION TetranacciHelper(n, a, b, c, d):
-    IF n == 0:
+FUNCTION TetranacciHelper(k, a, b, c, d):
+    IF k = 0:
         RETURN a
-    IF n == 1:
+    IF k = 1:
         RETURN b
-    IF n == 2:
+    IF k = 2:
         RETURN c
-    IF n == 3:
+    IF k = 3:
         RETURN d
-    RETURN TetranacciHelper(n - 1, b, c, d, a + b + c + d)
+    RETURN TetranacciHelper(k - 1, b, c, d, a + b + c + d)
 
 ---------------------------------

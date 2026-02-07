@@ -1,0 +1,17 @@
+Assignment 1 - AI Comparison
+Name and ID: Camila Rojas (40321494) Section S
+Name and ID: Daniel Tehrani (40100248) Section X
+COMP 352 Winter 2026
+
+Multiple Tetranacci
+
+1 - Given the simplicity of this version of the Tetranacci program, there are only minimal differences between our version and the AI.
+One difference lies in the timing measurement; the AI is using elapsed time to clarify the exact purpose of each variable.
+
+2 - Another difference is the format of the output; our version uses printf which allows more control over the formatting.
+
+------------------------------------------------
+
+Linear Tetranacci
+
+1 - 

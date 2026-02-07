@@ -8,9 +8,9 @@ public class TetranacciMultiple {
 // n being the position in the tetranacci sequence:
     public static long tetranacci(int n){
 
-        //base case
+        //base cases
         if (n==0 || n==1 || n==2) return 0;
-        //different second base case
+        //final base case
         if (n==3) return 1;
 
         return tetranacci(n-1) + tetranacci(n-2) + tetranacci(n-3) + tetranacci(n-4);
